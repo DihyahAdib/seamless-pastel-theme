@@ -1,0 +1,21 @@
+{
+  "name": "seamless-pastel-theme",
+  "displayName": "seamless-pastel-theme",
+  "description": "Seamless's Pastel Theme",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.102.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Seamless's Pastel Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Seamless's Pastel Theme-color-theme.json"
+      }
+    ]
+  }
+}
