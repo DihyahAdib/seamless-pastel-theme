@@ -2,63 +2,68 @@
   "name": "Seamless",
   "type": "dark",
   "semanticHighlighting": false,
+  "semanticTokenColors": {
+    "enumMember": {
+      "foreground": "#175f93"
+    }
+  },
   "tokenColors": [
     {
-      "scope": "punctuation.definition.string.begin, punctuation.definition.string.end",
+      "scope": "punctuation.definition.string.begin, punctuation.definition.string.end, punctuation.definition.string.begin.ts, punctuation.definition.string.end.ts, punctuation.definition.string.begin.tsx, punctuation.definition.string.end.tsx, punctuation.definition.string.begin.python, punctuation.definition.string.end.python, punctuation.definition.string.begin.cpp, punctuation.definition.string.end.cpp",
       "settings": {
         "foreground": "#5c7e57"
       }
     },
     {
-      "scope": "punctuation.separator.key-value",
+      "scope": "punctuation.separator.key-value, punctuation.separator.key-value.ts, punctuation.separator.key-value.tsx, punctuation.separator.key-value.python, punctuation.separator.key-value.cpp",
       "settings": {
         "foreground": "#c9c9c9"
       }
     },
     {
-      "scope": "meta.objectliteral.js punctuation.separator.comma",
+      "scope": "meta.objectliteral.js punctuation.separator.comma, meta.objectliteral.ts punctuation.separator.comma, meta.objectliteral.tsx punctuation.separator.comma",
       "settings": {
         "foreground": "#ffffff"
       }
     },
     {
       "name": "targets all numbers",
-      "scope": "constant.numeric",
+      "scope": "constant.numeric, constant.numeric.python, constant.numeric.cpp",
       "settings": {
         "foreground": "#77a2a2"
       }
     },
     {
       "name": "targets true or false",
-      "scope": "constant.language",
+      "scope": "constant.language, constant.language.python, constant.language.cpp",
       "settings": {
         "foreground": "#a34980"
       }
     },
     {
       "name": "Strings",
-      "scope": "string",
+      "scope": "string, string.quoted.single.python, string.quoted.double.python, string.quoted.single.cpp, string.quoted.double.cpp",
       "settings": {
         "foreground": "#71a868"
       }
     },
     {
       "name": "Regular Expressions",
-      "scope": "string.regexp",
+      "scope": "string.regexp, string.regexp.ts, string.regexp.tsx",
       "settings": {
         "foreground": "#38b4ae"
       }
     },
     {
       "name": "Escape Characters",
-      "scope": "constant.character.escape",
+      "scope": "constant.character.escape, constant.character.escape.python, constant.character.escape.cpp",
       "settings": {
         "foreground": "#ffffff"
       }
     },
     {
       "name": "Punctuation",
-      "scope": "punctuation.separator.delimiter",
+      "scope": "punctuation.separator.delimiter, punctuation.separator.delimiter.ts, punctuation.separator.delimiter.tsx, punctuation.separator.delimiter.python, punctuation.separator.delimiter.cpp",
       "settings": {
         "foreground": "#ffe600"
       }
@@ -66,7 +71,11 @@
     {
       "name": "targets periods -> .",
       "scope": [
-        "punctuation.accessor.js"
+        "punctuation.accessor.js",
+        "punctuation.accessor.ts",
+        "punctuation.accessor.tsx",
+        "punctuation.accessor.python",
+        "punctuation.accessor.cpp"
       ],
       "settings": {
         "foreground": "#d8d8d8"
@@ -74,83 +83,94 @@
     },
     {
       "name": "Operators (general)",
-      "scope": "keyword.operator",
+      "scope": "keyword.operator, keyword.operator.python, keyword.operator.cpp",
       "settings": {
         "foreground": "#dedede"
       }
     },
     {
       "name": "Arithmetic, Comparison, Increment/Decrement Operators",
-      "scope": "keyword.operator.arithmetic,keyword.operator.comparison,keyword.operator.decrement,keyword.operator.increment,keyword.operator.relational",
+      "scope": "keyword.operator.arithmetic, keyword.operator.comparison, keyword.operator.decrement, keyword.operator.increment, keyword.operator.relational, keyword.operator.arithmetic.python, keyword.operator.comparison.python, keyword.operator.arithmetic.cpp, keyword.operator.comparison.cpp",
       "settings": {
         "foreground": "#dedede"
       }
     },
     {
       "name": "Compound Assignment Operators js/ts",
-      "scope": "keyword.operator.assignment.compound.js,keyword.operator.assignment.compound.ts",
+      "scope": "keyword.operator.assignment.compound.js, keyword.operator.assignment.compound.ts, keyword.operator.assignment.compound.tsx, keyword.operator.assignment.compound.python, keyword.operator.assignment.compound.cpp",
       "settings": {
         "foreground": "#38b4ae"
       }
     },
     {
       "name": "Keywords (general)",
-      "scope": "keyword",
+      "scope": "keyword, keyword.python, keyword.cpp",
       "settings": {
         "foreground": "#c4ab92"
       }
     },
     {
       "name": "Control Keywords (if, for, return, etc.)",
-      "scope": "keyword.control",
+      "scope": "keyword.control, keyword.control.flow.python, keyword.control.conditional.python, keyword.control.loop.python, keyword.control.cpp",
       "settings": {
         "foreground": "#3B8C6E"
       }
     },
     {
       "name": "Async keyword",
-      "scope": "storage.modifier.async",
+      "scope": "storage.modifier.async, storage.modifier.async.ts, storage.modifier.async.tsx, storage.modifier.async.python",
       "settings": {
         "foreground": "#99506c"
       }
     },
     {
       "name": "Class keyword",
-      "scope": "storage.type.class",
+      "scope": "storage.type.class, storage.type.class.python, storage.type.class.cpp",
       "settings": {
         "foreground": "#5d4274"
       }
     },
     {
       "name": "Function keyword",
-      "scope": "storage.type.function",
+      "scope": "storage.type.function, storage.type.function.python, storage.type.function.cpp",
       "settings": {
         "foreground": "#c0718f"
       }
     },
     {
       "name": "Constructor & Const keywords",
-      "scope": "storage.type",
+      "scope": "storage.type, storage.type.python, storage.type.cpp",
       "settings": {
         "foreground": "#3B8C6E"
       }
     },
     {
       "name": "Extends keyword",
-      "scope": "storage.modifier",
+      "scope": "storage.modifier, storage.modifier.python, storage.modifier.cpp",
       "settings": {
         "foreground": "#59937e"
       }
     },
     // --- JS/TS SPECIFIC KEYWORDS & BUILT-INS (More specific than general keywords) ---
     {
-      "name": "js/ts Keyword (instanceof, new, ternary, optional, keyof)",
+      "name": "JS/TS Keyword (instanceof, new, ternary, optional, keyof)",
       "scope": [
         "keyword.operator.expression.instanceof",
         "keyword.operator.new",
         "keyword.operator.ternary",
         "keyword.operator.optional",
-        "keyword.operator.expression.keyof"
+        "keyword.operator.expression.keyof",
+        "keyword.operator.expression.instanceof.ts",
+        "keyword.operator.new.ts",
+        "keyword.operator.ternary.ts",
+        "keyword.operator.optional.ts",
+        "keyword.operator.expression.keyof.ts",
+        "keyword.operator.expression.instanceof.tsx",
+        "keyword.operator.new.tsx",
+        "keyword.operator.ternary.tsx",
+        "keyword.operator.optional.tsx",
+        "keyword.operator.expression.keyof.tsx",
+        "keyword.operator.new.cpp" // 'new' in C++
       ],
       "settings": {
         "foreground": "#386890",
@@ -159,14 +179,14 @@
     },
     {
       "name": "of/in keywords",
-      "scope": "keyword.operator.expression.of.js, keyword.operator.expression.in.js",
+      "scope": "keyword.operator.expression.of.js, keyword.operator.expression.in.js, keyword.operator.expression.of.ts, keyword.operator.expression.in.ts, keyword.operator.expression.of.tsx, keyword.operator.expression.in.tsx, keyword.operator.word.in.python",
       "settings": {
         "foreground": "#8866b2"
       }
     },
     {
       "name": "Delete keyword",
-      "scope": "keyword.operator.expression.delete",
+      "scope": "keyword.operator.expression.delete, keyword.operator.expression.delete.ts, keyword.operator.expression.delete.tsx",
       "settings": {
         "foreground": "#401d4a",
         "fontStyle": "bold"
@@ -174,84 +194,84 @@
     },
     {
       "name": "Import keyword",
-      "scope": "keyword.operator.expression.import",
+      "scope": "keyword.operator.expression.import, keyword.operator.expression.import.ts, keyword.operator.expression.import.tsx, keyword.control.import.python, keyword.control.from.python, meta.preprocessor.include.cpp", // C++ includes
       "settings": {
         "foreground": "#350a64"
       }
     },
     {
       "name": "Export keyword",
-      "scope": "keyword.control.export",
+      "scope": "keyword.control.export, keyword.control.export.ts, keyword.control.export.tsx",
       "settings": {
         "foreground": "#3B8C6E"
       }
     },
     {
       "name": "Await keyword",
-      "scope": "keyword.control.flow",
+      "scope": "keyword.control.flow, keyword.control.flow.ts, keyword.control.flow.tsx, keyword.control.flow.python",
       "settings": {
         "foreground": "#4d2459"
       }
     },
     {
-      "name": "js/ts console object",
-      "scope": "support.type.object.console",
+      "name": "JS/TS console object",
+      "scope": "support.type.object.console, support.type.object.console.ts, support.type.object.console.tsx",
       "settings": {
         "foreground": "#b63c3c"
       }
     },
     {
-      "name": "js console function methods (log, warn, etc.)",
-      "scope": "entity.name.function,support.function.console",
+      "name": "JS console function methods (log, warn, etc.)",
+      "scope": "entity.name.function, support.function.console, entity.name.function.ts, support.function.console.ts, entity.name.function.tsx, support.function.console.tsx",
       "settings": {
         "foreground": "#ffffff"
       }
     },
     {
-      "name": "js/ts process object",
-      "scope": "support.variable.property.process",
+      "name": "JS/TS process object",
+      "scope": "support.variable.property.process, support.variable.property.process.ts, support.variable.property.process.tsx",
       "settings": {
         "foreground": "#b6dba9"
       }
     },
     {
-      "name": "js DOM objects (document, window, HTMLElement)",
-      "scope": "support.type.object.dom",
+      "name": "JS/TS DOM objects (document, window, HTMLElement)",
+      "scope": "support.type.object.dom, support.type.object.dom.ts, support.type.object.dom.tsx",
       "settings": {
         "foreground": "#38b4ae"
       }
     },
     {
-      "name": "js DOM variables/properties",
-      "scope": "support.variable.dom,support.variable.property.dom",
+      "name": "JS/TS DOM variables/properties",
+      "scope": "support.variable.dom, support.variable.property.dom, support.variable.dom.ts, support.variable.property.dom.ts, support.variable.dom.tsx, support.variable.property.dom.tsx",
       "settings": {
         "foreground": "#822d51"
       }
     },
     {
-      "name": "Support functions (parseInt, setTimeout)",
-      "scope": "support.function",
+      "name": "Support functions (parseInt, setTimeout, print in Python)",
+      "scope": "support.function, support.function.ts, support.function.tsx, support.function.builtin.python, support.function.cpp",
       "settings": {
         "foreground": "#38b4ae"
       }
     },
     {
       "name": "Flowtype types",
-      "scope": "support.type.type.flowtype",
+      "scope": "support.type.type.flowtype, support.type.type.flowtype.ts, support.type.type.flowtype.tsx",
       "settings": {
         "foreground": "#529bc8"
       }
     },
     {
       "name": "Flow primitive types",
-      "scope": "support.type.primitive",
+      "scope": "support.type.primitive, support.type.primitive.ts, support.type.primitive.tsx",
       "settings": {
         "foreground": "#717171"
       }
     },
     {
       "name": "Template literal punctuation",
-      "scope": "punctuation.quasi.element",
+      "scope": "punctuation.quasi.element, punctuation.quasi.element.ts, punctuation.quasi.element.tsx",
       "settings": {
         "foreground": "#3b7b63"
       }
@@ -260,7 +280,11 @@
       "name": "Template literal variable braces",
       "scope": [
         "keyword.other.substitution.begin",
-        "keyword.other.substitution.end"
+        "keyword.other.substitution.end",
+        "keyword.other.substitution.begin.ts",
+        "keyword.other.substitution.end.ts",
+        "keyword.other.substitution.begin.tsx",
+        "keyword.other.substitution.end.tsx"
       ],
       "settings": {
         "foreground": "#71a868"
@@ -270,7 +294,11 @@
       "name": "Template literal begin/end",
       "scope": [
         "keyword.other.template.begin",
-        "keyword.other.template.end"
+        "keyword.other.template.end",
+        "keyword.other.template.begin.ts",
+        "keyword.other.template.end.ts",
+        "keyword.other.template.begin.tsx",
+        "keyword.other.template.end.tsx"
       ],
       "settings": {
         "foreground": "#71a868"
@@ -278,16 +306,22 @@
     },
     {
       "name": "HTML/Pug escaped characters and entities",
-      "scope": "constant.character.entity",
+      "scope": "constant.character.entity, constant.character.entity.html, constant.character.entity.pug",
       "settings": {
         "foreground": "#822d51"
       }
     },
     {
-      "name": "Regular function calls",
+      "name": "Regular function calls (JS/TS/Python/C++)",
       "scope": [
         "meta.function-call.js",
-        "entity.name.function.js"
+        "entity.name.function.js",
+        "meta.function-call.ts",
+        "entity.name.function.ts",
+        "meta.function-call.tsx",
+        "entity.name.function.tsx",
+        "entity.name.function.python",
+        "entity.name.function.cpp"
       ],
       "settings": {
         "foreground": "#3388af"
@@ -299,15 +333,23 @@
         "entity.name.function.js.require",
         "meta.require",
         "meta.var.expr.js entity.name.function",
-        "support.function.node.js"
+        "support.function.node.js",
+        "entity.name.function.ts.require",
+        "meta.require.ts",
+        "meta.var.expr.ts entity.name.function",
+        "support.function.node.ts",
+        "entity.name.function.tsx.require",
+        "meta.require.tsx",
+        "meta.var.expr.tsx entity.name.function",
+        "support.function.node.tsx"
       ],
       "settings": {
-        "foreground": "#ff0000"
+        "foreground": "#ad5555"
       }
     },
     // --- CSS/SCSS/LESS SPECIFIC RULES ---
     {
-      "scope": "support.constant.property-value.css",
+      "scope": "support.constant.property-value.css, support.constant.property-value.scss, support.constant.property-value.less",
       "settings": {
         "foreground": "#2b9069"
       }
@@ -319,75 +361,77 @@
       }
     },
     {
-      "scope": "support.constant.color.w3c-standard-color-name.css, support.constant.color.w3c-standard-color-name.scss",
+      "scope": "support.constant.color.w3c-standard-color-name.css, support.constant.color.w3c-standard-color-name.scss, support.constant.color.w3c-standard-color-name.less",
       "settings": {
         "foreground": "#5f8f4e"
       }
     },
     {
-      "scope": "punctuation.separator.list.comma.css",
+      "scope": "punctuation.separator.list.comma.css, punctuation.separator.list.comma.scss, punctuation.separator.list.comma.less",
       "settings": {
         "foreground": "#907676"
       }
     },
     {
-      "scope": "support.type.vendored.property-name.css",
+      "scope": "support.type.vendored.property-name.css, support.type.vendored.property-name.scss, support.type.vendored.property-name.less",
       "settings": {
         "foreground": "#3b6c6a"
       }
     },
     {
-      "scope": "support.type.property-name.css",
+      "scope": "support.type.property-name.css, support.type.property-name.scss, support.type.property-name.less",
       "settings": {
         "foreground": "#3b616c"
       }
     },
     {
-      "scope": "entity.name.tag.css",
+      "scope": "entity.name.tag.css, entity.name.tag.scss, entity.name.tag.less",
       "settings": {
         "foreground": "#a03f4e"
       }
     },
     {
-      "scope": "entity.other.attribute-name.class.css",
+      "name": "CSS Class Attribute Name",
+      "scope": "entity.other.attribute-name.class.css, entity.other.attribute-name.class.scss, entity.other.attribute-name.class.less",
       "settings": {
         "foreground": "#72435A"
       }
     },
     {
-      "scope": "entity.other.attribute-name.id.css",
+      "name": "CSS ID Attribute Name",
+      "scope": "entity.other.attribute-name.id.css, entity.other.attribute-name.id.scss, entity.other.attribute-name.id.less",
       "settings": {
         "foreground": "#822D51"
       }
     },
     {
-      "scope": "meta.function.color.css",
+      "scope": "meta.function.color.css, meta.function.color.scss, meta.function.color.less",
       "settings": {
         "foreground": "#b0b0b0"
       }
     },
     {
-      "scope": "meta.property-value.css",
+      "scope": "meta.property-value.css, meta.property-value.scss, meta.property-value.less",
       "settings": {
         "foreground": "#b0b0b0"
       }
     },
     {
-      "scope": "meta.property-list.css",
+      "scope": "meta.property-list.css, meta.property-list.scss, meta.property-list.less",
       "settings": {
         "foreground": "#ffffff"
       }
     },
     {
       "name": "rgb-value",
-      "scope": "rgb-value",
+      "scope": "rgb-value, rgb-value.scss, rgb-value.less",
       "settings": {
         "foreground": "#38b4ae"
       }
     },
     {
       "name": "rgb value",
-      "scope": "inline-color-decoration rgb-value",
+      "scope": "inline-color-decoration rgb-value, inline-color-decoration rgb-value.scss, inline-color-decoration rgb-value.less",
       "settings": {
         "foreground": "#b6dba9"
       }
@@ -408,109 +452,128 @@
     },
     {
       "name": "ts primitive/builtin types",
-      "scope": "support.type.primitive.ts,support.type.builtin.ts,support.type.primitive.tsx,support.type.builtin.tsx",
+      "scope": "support.type.primitive.ts, support.type.builtin.ts, support.type.primitive.tsx, support.type.builtin.tsx, support.type.primitive.cpp",
       "settings": {
         "foreground": "#717171"
       }
     },
     // --- HTML/JSX SPECIFIC RULES ---
     {
-      "name": "Tags",
-      "scope": "entity.name.tag",
+      "name": "Tags (HTML/JSX)",
+      "scope": "entity.name.tag, entity.name.tag.html, entity.name.tag.tsx",
       "settings": {
         "foreground": "#69599d"
       }
     },
     {
-      "name": "Attributes",
-      "scope": "entity.name.attribute",
+      "name": "Attributes (HTML/JSX)",
+      "scope": "entity.name.attribute, entity.name.attribute.html, entity.name.attribute.tsx",
       "settings": {
         "foreground": "#b6dba9"
       }
     },
     {
-      "name": "Attribute IDs",
-      "scope": "entity.other.attribute-name.id",
+      "name": "Attribute IDs (HTML/JSX)",
+      "scope": "entity.other.attribute-name.id, entity.other.attribute-name.id.html, entity.other.attribute-name.id.tsx",
       "settings": {
         "foreground": "#529bc8"
       }
     },
     {
-      "name": "Meta tag",
-      "scope": "meta.tag",
+      "name": "Meta tag (HTML/JSX)",
+      "scope": "meta.tag, meta.tag.html, meta.tag.tsx",
       "settings": {
         "foreground": "#616161"
       }
     },
     // --- VARIABLE / PROPERTY / PARAMETER SPECIFIC OVERRIDES (Place these later for precedence) ---
     {
-      "name": "targets the this keywords",
-      "scope": "variable.language",
+      "name": "targets the this/self keywords",
+      "scope": "variable.language, variable.language.self.python, variable.language.this.cpp",
       "settings": {
         "foreground": "#4d6579"
       }
     },
     {
-      "name": "Function parameters",
-      "scope": "variable.parameter.js, function.parameter",
+      "name": "Function parameters (JS/TS/Python/C++)",
+      "scope": "variable.parameter.js, function.parameter, variable.parameter.ts, variable.parameter.tsx, variable.parameter.function.python, variable.parameter.cpp",
       "settings": {
-        "foreground": "#78314f" // Your desired color for parameters
+        "foreground": "#78314f"
       }
     },
     {
-      "name": "Object literal keys (e.g., targets, y, ease, duration)",
-      "scope": "meta.object-literal.key.js, meta.objectliteral.js",
+      "name": "Object literal keys (JS/TS/React)",
+      "scope": "meta.object-literal.key.js, meta.objectliteral.js, meta.object-literal.key.ts, meta.objectliteral.ts, meta.object-literal.key.tsx, meta.objectliteral.tsx",
       "settings": {
-        "foreground": "#72435A" // Keeping their specific color
+        "foreground": "#72435A"
       }
     },
     {
-      "name": "targets .Scene at the end of class creation",
-      "scope": "entity.other.inherited-class, entity.name.type.class",
+      "name": "targets .Scene at the end of class creation (JS/TS/C++)",
+      "scope": "entity.other.inherited-class, entity.name.type.class, entity.other.inherited-class.ts, entity.name.type.class.ts, entity.other.inherited-class.tsx, entity.name.type.class.tsx, entity.other.inherited-class.cpp, entity.name.type.class.cpp",
       "settings": {
         "foreground": "#a03f4e"
       }
     },
     {
-      "name": "targets what ur extending from e.g: Phaser",
-      "scope": "entity.name.type.module",
+      "name": "targets what ur extending from e.g: Phaser (JS/TS/Python/C++)",
+      "scope": "entity.name.type.module, entity.name.type.module.ts, entity.name.type.module.tsx, entity.name.type.module.python, entity.name.type.module.cpp",
       "settings": {
         "foreground": "#37adba"
       }
     },
     {
-      "name": "targets constants (e.g., const MY_CONST = ...)",
-      "scope": "variable.other.constant.js",
+      "name": "targets constants (e.g., const MY_CONST = ...) (JS/TS/Python/C++)",
+      "scope": "variable.other.constant.js, variable.other.constant.ts, variable.other.constant.tsx, variable.other.constant.python, variable.other.constant.cpp",
       "settings": {
         "foreground": "#b24170"
       }
     },
     {
-      "name": "targets end props (e.g., in a constant object)",
-      "scope": "variable.other.constant.property.js",
+      "name": "targets end props (e.g., in a constant object) (JS/TS)",
+      "scope": "variable.other.constant.property.js, variable.other.constant.property.ts, variable.other.constant.property.tsx",
       "settings": {
         "foreground": "#3f98a0"
       }
     },
     {
-      "name": "targets object variable names (e.g., weaponStructs)",
-      "scope": "variable.other.object.js",
-      "settings": {
-        "foreground": "#822D51" // Maroon for weaponStructs
-      }
-    },
-    {
       "name": "targets properties accessed on objects (e.g., barHeight, lineThickness)",
-      "scope": "meta.var.expr.js",
+      "scope": "meta.var.expr.js, variable.other.property.ts, variable.other.property.tsx, variable.other.member.python, variable.other.property.cpp",
       "settings": {
         "foreground": "#45B38BF3" // Green for barHeight and similar
       }
     },
     {
-      "name": "targets properties accessed on objects (e.g., weaponStructs)",
-      "scope": "meta.method.declaration.js",
+      "name": "targets object variable names (e.g., weaponStructs)",
+      "scope": "variable.other.object.js, variable.other.object.ts, variable.other.object.tsx, variable.other.object.python, variable.other.object.cpp",
       "settings": {
-        "foreground": "#822D51" // Green for barHeight and similar
+        "foreground": "#822D51" // Maroon for weaponStructs
+      }
+    },
+    {
+      "scope": [
+        "meta.method.declaration.js",
+        "meta.method.declaration.ts",
+        "meta.method.declaration.tsx",
+        "meta.method.declaration.jsx",
+        "meta.method.declaration.python",
+        "meta.method.declaration.cpp"
+      ],
+      "settings": {
+        "foreground": "#822D51"
+      }
+    },
+    {
+      "name": "Commas within method declarations (override)",
+      "scope": "meta.method.declaration.js punctuation.separator.comma.js",
+      "settings": {
+        "foreground": "#ffffff" // White for commas in method declarations
+      }
+    },
+    {
+      "scope": "punctuation.terminator.statement.js",
+      "settings": {
+        "foreground": "#ffffff"
       }
     },
     {
@@ -521,23 +584,52 @@
       }
     },
     {
-      "name": "comments",
+      "scope": [
+        "variable.object.property",
+      ],
+      "settings": {
+        "foreground": "#4D6579"
+      }
+    },
+    {
+      "name": "comments (JS/TS/Python/C++)",
       "scope": [
         "comment.line.double-slash.js",
-        "comment.block.js"
+        "comment.block.js",
+        "comment.line.double-slash.ts",
+        "comment.block.ts",
+        "comment.line.double-slash.tsx",
+        "comment.block.tsx",
+        "comment.line.number-sign.python",
+        "comment.block.documentation.python",
+        "comment.block.python",
+        "comment.line.double-slash.cpp",
+        "comment.block.cpp"
       ],
       "settings": {
         "foreground": "#aaaaaaf3"
       }
     },
     {
-      "name": "JS Variable Read/Write",
+      "name": "JS/TS/Python/C++ Variable Read/Write (General Catch-all for other variables)",
       "scope": [
         "variable.other.readwrite.js",
-        "meta.object.member.js"
+        "variable.other.readwrite.ts",
+        "variable.other.readwrite.tsx",
+        "variable.other.readwrite.python",
+        "variable.other.readwrite.cpp"
       ],
       "settings": {
-        "foreground": "#45b38bf3"
+        "foreground": "#45b38bf3" // This will catch other general read-write variables not covered by more specific rules
+      }
+    },
+    {
+      "scope": [
+        "variable.other.readwrite.alias.js",
+        "meta.import.js"
+      ],
+      "settings": {
+        "foreground": "#4D6579"
       }
     },
   ],
