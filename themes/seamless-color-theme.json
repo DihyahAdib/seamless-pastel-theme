@@ -1,53 +1,10 @@
 {
   "name": "Seamless",
   "type": "dark",
-  "semanticHighlighting": true,
-  "semanticTokenColors": {
-    "parameter": {
-      "foreground": "#822D51"
-    },
-    //variable - finished
-    "variable.readonly": {
-      "foreground": "#868686"
-    },
-    "variable.local": {
-      "foreground": "#23b786"
-    },
-    "variable.declaration": {
-      "foreground": "#a73c69",
-    },
-    "variable": {
-      "foreground": "#c6c6c6"
-    },
-    //properties
-    "property": {
-      "foreground": "#822D51"
-    },
-    "property.readonly": {
-      "foreground": "#569e97"
-    },
-    "property.declaration": {
-      "foreground": "#72435a"
-    },
-    "variable.defaultLibrary": {
-      "foreground": "#b63c3c"
-    },
-    "property.local": {
-      "foreground": "#ffffff"
-    },
-    "property.abstract": {
-      "foreground": "#ffffff"
-    },
-    "property.documentation": {
-      "foreground": "#ffffff"
-    },
-    "property.member": {
-      "foreground": "#ffffff"
-    },
-  },
+  "semanticHighlighting": false,
   "tokenColors": [
     {
-      "scope": "punctuation.definition.string.begin,punctuation.definition.string.end",
+      "scope": "punctuation.definition.string.begin, punctuation.definition.string.end",
       "settings": {
         "foreground": "#5c7e57"
       }
@@ -59,19 +16,135 @@
       }
     },
     {
-      "scope": "entity.name.type.module",
-      "settings": {
-        "foreground": "#37adba"
-      }
-    },
-    {
-      "scope": "meta.object-literal.key, meta.objectliteral.js",
+      "scope": "meta.objectliteral.js punctuation.separator.comma",
       "settings": {
         "foreground": "#ffffff"
       }
     },
     {
-      "name": "js/ts Keyword",
+      "name": "targets all numbers",
+      "scope": "constant.numeric",
+      "settings": {
+        "foreground": "#77a2a2"
+      }
+    },
+    {
+      "name": "targets true or false",
+      "scope": "constant.language",
+      "settings": {
+        "foreground": "#a34980"
+      }
+    },
+    {
+      "name": "Strings",
+      "scope": "string",
+      "settings": {
+        "foreground": "#71a868"
+      }
+    },
+    {
+      "name": "Regular Expressions",
+      "scope": "string.regexp",
+      "settings": {
+        "foreground": "#38b4ae"
+      }
+    },
+    {
+      "name": "Escape Characters",
+      "scope": "constant.character.escape",
+      "settings": {
+        "foreground": "#ffffff"
+      }
+    },
+    {
+      "name": "Punctuation",
+      "scope": "punctuation.separator.delimiter",
+      "settings": {
+        "foreground": "#ffe600"
+      }
+    },
+    {
+      "name": "targets periods -> .",
+      "scope": [
+        "punctuation.accessor.js"
+      ],
+      "settings": {
+        "foreground": "#d8d8d8"
+      }
+    },
+    {
+      "name": "Operators (general)",
+      "scope": "keyword.operator",
+      "settings": {
+        "foreground": "#dedede"
+      }
+    },
+    {
+      "name": "Arithmetic, Comparison, Increment/Decrement Operators",
+      "scope": "keyword.operator.arithmetic,keyword.operator.comparison,keyword.operator.decrement,keyword.operator.increment,keyword.operator.relational",
+      "settings": {
+        "foreground": "#dedede"
+      }
+    },
+    {
+      "name": "Compound Assignment Operators js/ts",
+      "scope": "keyword.operator.assignment.compound.js,keyword.operator.assignment.compound.ts",
+      "settings": {
+        "foreground": "#38b4ae"
+      }
+    },
+    {
+      "name": "Keywords (general)",
+      "scope": "keyword",
+      "settings": {
+        "foreground": "#c4ab92"
+      }
+    },
+    {
+      "name": "Control Keywords (if, for, return, etc.)",
+      "scope": "keyword.control",
+      "settings": {
+        "foreground": "#3B8C6E"
+      }
+    },
+    {
+      "name": "Async keyword",
+      "scope": "storage.modifier.async",
+      "settings": {
+        "foreground": "#99506c"
+      }
+    },
+    {
+      "name": "Class keyword",
+      "scope": "storage.type.class",
+      "settings": {
+        "foreground": "#5d4274"
+      }
+    },
+    {
+      "name": "Function keyword",
+      "scope": "storage.type.function",
+      "settings": {
+        "foreground": "#c0718f"
+      }
+    },
+    {
+      "name": "Constructor & Const keywords",
+      "scope": "storage.type",
+      "settings": {
+        "foreground": "#3B8C6E"
+      }
+    },
+    {
+      "name": "Extends keyword",
+      "scope": "storage.modifier",
+      "settings": {
+        "foreground": "#59937e"
+      }
+    },
+    // --- JS/TS SPECIFIC KEYWORDS & BUILT-INS (More specific than general keywords) ---
+    {
+      "name": "js/ts Keyword (instanceof, new, ternary, optional, keyof)",
       "scope": [
         "keyword.operator.expression.instanceof",
         "keyword.operator.new",
@@ -85,72 +158,14 @@
       }
     },
     {
-      "scope": [
-        "variable.other.object.property.js",
-      ],
-      "settings": {
-        "foreground": "#868686"
-      }
-    },
-    {
-      "scope": [
-        "variable.other.property.js",
-      ],
-      "settings": {
-        "foreground": "#3b8c6e"
-      }
-    },
-    {
-      "scope": "keyword.operator",
-      "settings": {
-        "foreground": "#dedede"
-      }
-    },
-    {
+      "name": "of/in keywords",
       "scope": "keyword.operator.expression.of.js, keyword.operator.expression.in.js",
       "settings": {
         "foreground": "#8866b2"
       }
     },
     {
-      "name": "Language variables",
-      "scope": "variable.language",
-      "settings": {
-        "foreground": "#455b6e"
-      }
-    },
-    {
-      "scope": "entity.name.type.class",
-      "settings": {
-        "foreground": "#a03f4e"
-      }
-    },
-    {
-      "scope": "storage.type.class",
-      "settings": {
-        "foreground": "#5d4274"
-      }
-    },
-    {
-      "scope": "keyword.control",
-      "settings": {
-        "foreground": "#3b7b63"
-      }
-    },
-    {
-      "name": "Storage",
-      "scope": "storage",
-      "settings": {
-        "foreground": "#3b7b63"
-      }
-    },
-    {
-      "scope": "token.storage",
-      "settings": {
-        "foreground": "#3b7b63"
-      }
-    },
-    {
+      "name": "Delete keyword",
       "scope": "keyword.operator.expression.delete",
       "settings": {
         "foreground": "#401d4a",
@@ -158,50 +173,120 @@
       }
     },
     {
-      "name": "Strings",
-      "scope": "string",
+      "name": "Import keyword",
+      "scope": "keyword.operator.expression.import",
+      "settings": {
+        "foreground": "#350a64"
+      }
+    },
+    {
+      "name": "Export keyword",
+      "scope": "keyword.control.export",
+      "settings": {
+        "foreground": "#3B8C6E"
+      }
+    },
+    {
+      "name": "Await keyword",
+      "scope": "keyword.control.flow",
+      "settings": {
+        "foreground": "#4d2459"
+      }
+    },
+    {
+      "name": "js/ts console object",
+      "scope": "support.type.object.console",
+      "settings": {
+        "foreground": "#b63c3c"
+      }
+    },
+    {
+      "name": "js console function methods (log, warn, etc.)",
+      "scope": "entity.name.function,support.function.console",
+      "settings": {
+        "foreground": "#ffffff"
+      }
+    },
+    {
+      "name": "js/ts process object",
+      "scope": "support.variable.property.process",
+      "settings": {
+        "foreground": "#b6dba9"
+      }
+    },
+    {
+      "name": "js DOM objects (document, window, HTMLElement)",
+      "scope": "support.type.object.dom",
+      "settings": {
+        "foreground": "#38b4ae"
+      }
+    },
+    {
+      "name": "js DOM variables/properties",
+      "scope": "support.variable.dom,support.variable.property.dom",
+      "settings": {
+        "foreground": "#822d51"
+      }
+    },
+    {
+      "name": "Support functions (parseInt, setTimeout)",
+      "scope": "support.function",
+      "settings": {
+        "foreground": "#38b4ae"
+      }
+    },
+    {
+      "name": "Flowtype types",
+      "scope": "support.type.type.flowtype",
+      "settings": {
+        "foreground": "#529bc8"
+      }
+    },
+    {
+      "name": "Flow primitive types",
+      "scope": "support.type.primitive",
+      "settings": {
+        "foreground": "#717171"
+      }
+    },
+    {
+      "name": "Template literal punctuation",
+      "scope": "punctuation.quasi.element",
+      "settings": {
+        "foreground": "#3b7b63"
+      }
+    },
+    {
+      "name": "Template literal variable braces",
+      "scope": [
+        "keyword.other.substitution.begin",
+        "keyword.other.substitution.end"
+      ],
       "settings": {
         "foreground": "#71a868"
       }
     },
     {
-      "name": "Inherited Class",
-      "scope": "entity.other.inherited-class",
-      "settings": {
-        "foreground": "#a03f4e"
-      }
-    },
-    {
-      "name": "Integers",
-      "scope": "constant.numeric",
-      "settings": {
-        "foreground": "#77a2a2"
-      }
-    },
-    {
-      "scope": "constant",
-      "settings": {
-        "foreground": "#a14d8c"
-      }
-    },
-    {
+      "name": "Template literal begin/end",
       "scope": [
-        "meta.template.expression"
+        "keyword.other.template.begin",
+        "keyword.other.template.end"
       ],
       "settings": {
-        "foreground": "#a03f4e"
+        "foreground": "#71a868"
       }
     },
     {
-      "scope": [
-        "punctuation.accessor.js"
-      ],
+      "name": "HTML/Pug escaped characters and entities",
+      "scope": "constant.character.entity",
       "settings": {
-        "foreground": "#c9c9c9"
+        "foreground": "#822d51"
       }
     },
     {
+      "name": "Regular function calls",
       "scope": [
+        "meta.function-call.js",
         "entity.name.function.js"
       ],
       "settings": {
@@ -209,30 +294,252 @@
       }
     },
     {
-      "name": "Variables - Purple (most variables)",
+      "name": "Require function calls",
       "scope": [
-        "variable.other.readwrite",
-        "variable.other.constant",
-        "variable.other.object",
-        "variable.other.assignment"
+        "entity.name.function.js.require",
+        "meta.require",
+        "meta.var.expr.js entity.name.function",
+        "support.function.node.js"
       ],
       "settings": {
-        "foreground": "#984165"
+        "foreground": "#ff0000"
+      }
+    },
+    // --- CSS/SCSS/LESS SPECIFIC RULES ---
+    {
+      "scope": "support.constant.property-value.css",
+      "settings": {
+        "foreground": "#2b9069"
       }
     },
     {
-      "name": "Variables - Green Override (weaponStruct, enemyStruct, etc.)",
+      "scope": "keyword.operator.css, keyword.operator.scss, keyword.operator.less",
+      "settings": {
+        "foreground": "#3f9c97"
+      }
+    },
+    {
+      "scope": "support.constant.color.w3c-standard-color-name.css, support.constant.color.w3c-standard-color-name.scss",
+      "settings": {
+        "foreground": "#5f8f4e"
+      }
+    },
+    {
+      "scope": "punctuation.separator.list.comma.css",
+      "settings": {
+        "foreground": "#907676"
+      }
+    },
+    {
+      "scope": "support.type.vendored.property-name.css",
+      "settings": {
+        "foreground": "#3b6c6a"
+      }
+    },
+    {
+      "scope": "support.type.property-name.css",
+      "settings": {
+        "foreground": "#3b616c"
+      }
+    },
+    {
+      "scope": "entity.name.tag.css",
+      "settings": {
+        "foreground": "#a03f4e"
+      }
+    },
+    {
+      "scope": "entity.other.attribute-name.class.css",
+      "settings": {
+        "foreground": "#72435A"
+      }
+    },
+    {
+      "scope": "entity.other.attribute-name.id.css",
+      "settings": {
+        "foreground": "#822D51"
+      }
+    },
+    {
+      "scope": "meta.function.color.css",
+      "settings": {
+        "foreground": "#b0b0b0"
+      }
+    },
+    {
+      "scope": "meta.property-value.css",
+      "settings": {
+        "foreground": "#b0b0b0"
+      }
+    },
+    {
+      "scope": "meta.property-list.css",
+      "settings": {
+        "foreground": "#ffffff"
+      }
+    },
+    {
+      "name": "rgb-value",
+      "scope": "rgb-value",
+      "settings": {
+        "foreground": "#38b4ae"
+      }
+    },
+    {
+      "name": "rgb value",
+      "scope": "inline-color-decoration rgb-value",
+      "settings": {
+        "foreground": "#b6dba9"
+      }
+    },
+    {
+      "name": "rgb value less",
+      "scope": "less rgb-value",
+      "settings": {
+        "foreground": "#b6dba9"
+      }
+    },
+    {
+      "name": "sass selector",
+      "scope": "selector.sass",
+      "settings": {
+        "foreground": "#822d51"
+      }
+    },
+    {
+      "name": "ts primitive/builtin types",
+      "scope": "support.type.primitive.ts,support.type.builtin.ts,support.type.primitive.tsx,support.type.builtin.tsx",
+      "settings": {
+        "foreground": "#717171"
+      }
+    },
+    // --- HTML/JSX SPECIFIC RULES ---
+    {
+      "name": "Tags",
+      "scope": "entity.name.tag",
+      "settings": {
+        "foreground": "#69599d"
+      }
+    },
+    {
+      "name": "Attributes",
+      "scope": "entity.name.attribute",
+      "settings": {
+        "foreground": "#b6dba9"
+      }
+    },
+    {
+      "name": "Attribute IDs",
+      "scope": "entity.other.attribute-name.id",
+      "settings": {
+        "foreground": "#529bc8"
+      }
+    },
+    {
+      "name": "Meta tag",
+      "scope": "meta.tag",
+      "settings": {
+        "foreground": "#616161"
+      }
+    },
+    // --- VARIABLE / PROPERTY / PARAMETER SPECIFIC OVERRIDES (Place these later for precedence) ---
+    {
+      "name": "targets the this keywords",
+      "scope": "variable.language",
+      "settings": {
+        "foreground": "#4d6579"
+      }
+    },
+    {
+      "name": "Function parameters",
+      "scope": "variable.parameter.js, function.parameter",
+      "settings": {
+        "foreground": "#78314f" // Your desired color for parameters
+      }
+    },
+    {
+      "name": "Object literal keys (e.g., targets, y, ease, duration)",
+      "scope": "meta.object-literal.key.js, meta.objectliteral.js",
+      "settings": {
+        "foreground": "#72435A" // Keeping their specific color
+      }
+    },
+    {
+      "name": "targets .Scene at the end of class creation",
+      "scope": "entity.other.inherited-class, entity.name.type.class",
+      "settings": {
+        "foreground": "#a03f4e"
+      }
+    },
+    {
+      "name": "targets what ur extending from e.g: Phaser",
+      "scope": "entity.name.type.module",
+      "settings": {
+        "foreground": "#37adba"
+      }
+    },
+    {
+      "name": "targets constants (e.g., const MY_CONST = ...)",
+      "scope": "variable.other.constant.js",
+      "settings": {
+        "foreground": "#b24170"
+      }
+    },
+    {
+      "name": "targets end props (e.g., in a constant object)",
+      "scope": "variable.other.constant.property.js",
+      "settings": {
+        "foreground": "#3f98a0"
+      }
+    },
+    {
+      "name": "targets object variable names (e.g., weaponStructs)",
+      "scope": "variable.other.object.js",
+      "settings": {
+        "foreground": "#822D51" // Maroon for weaponStructs
+      }
+    },
+    {
+      "name": "targets properties accessed on objects (e.g., barHeight, lineThickness)",
+      "scope": "meta.var.expr.js",
+      "settings": {
+        "foreground": "#45B38BF3" // Green for barHeight and similar
+      }
+    },
+    {
+      "name": "targets properties accessed on objects (e.g., weaponStructs)",
+      "scope": "meta.method.declaration.js",
+      "settings": {
+        "foreground": "#822D51" // Green for barHeight and similar
+      }
+    },
+    {
+      "name": "secondary properties (if different from primary properties)",
+      "scope": "variable.other.object.property.js", // This might overlap with the above, place carefully
+      "settings": {
+        "foreground": "#868686"
+      }
+    },
+    {
+      "name": "comments",
       "scope": [
-        "variable.other.readwrite.js",
-        "variable.other.constant.js",
-        "variable.other.object.js",
-        "meta.var.expr variable.other.readwrite.js",
-        "meta.object-literal.key variable.other.readwrite.js"
+        "comment.line.double-slash.js",
+        "comment.block.js"
       ],
       "settings": {
-        "foreground": "#71a868"
+        "foreground": "#aaaaaaf3"
       }
-    }
+    },
+    {
+      "name": "JS Variable Read/Write",
+      "scope": [
+        "variable.other.readwrite.js",
+        "meta.object.member.js"
+      ],
+      "settings": {
+        "foreground": "#45b38bf3"
+      }
+    },
   ],
   "colors": {
     "foreground": "#ffffff",
