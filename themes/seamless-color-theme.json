@@ -578,7 +578,7 @@
     },
     {
       "name": "secondary properties (if different from primary properties)",
-      "scope": "variable.other.object.property.js", // This might overlap with the above, place carefully
+      "scope": "variable.other.object.property.js, variable.other.object.property.ts, variable.other.object.property.tsx, variable.other.object.property.python, variable.other.object.property.cpp", // This might overlap with the above, place carefully
       "settings": {
         "foreground": "#868686"
       }
@@ -626,7 +626,11 @@
     {
       "scope": [
         "variable.other.readwrite.alias.js",
-        "meta.import.js"
+        "variable.other.readwrite.alias.ts",
+        "variable.other.readwrite.alias.tsx",
+        "variable.other.readwrite.alias.python",
+        "variable.other.readwrite.alias.cpp",
+        "meta.import.js",
       ],
       "settings": {
         "foreground": "#4D6579"
