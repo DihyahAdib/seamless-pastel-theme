@@ -516,6 +516,13 @@
       }
     },
     {
+      "name": "ts type",
+      "scope": "entity.name.type.ts",
+      "settings": {
+        "foreground": "#9e9d9d",
+      }
+    },
+    {
       "name": "targets what ur extending from e.g: Phaser (JS/TS/Python/C++)",
       "scope": "entity.name.type.module, entity.name.type.module.ts, entity.name.type.module.tsx, entity.name.type.module.python, entity.name.type.module.cpp",
       "settings": {
